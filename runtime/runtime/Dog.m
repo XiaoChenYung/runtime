@@ -23,6 +23,7 @@
             id value = [aDecoder decodeObjectForKey:key];
             [self setValue:value forKeyPath:key];
         }
+        free(ivars);
     }
     return self;
 }
@@ -36,5 +37,6 @@
         id value = [self valueForKeyPath:key];
         [aCoder encodeObject:value forKey:key];
     }
+    free(ivars);
 }
 @end
