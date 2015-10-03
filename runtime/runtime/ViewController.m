@@ -20,12 +20,20 @@
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-//    Dog *dog = [[Dog alloc] init];
-//    dog.age = 50;
-//    dog.weight = 50.5;
-//    dog.height = 1.55;
-//    dog.nema = @"sdafsdf";
-  Dog *dog =  [NSKeyedUnarchiver unarchiveObjectWithFile:@"/Users/yangxiaochen/Desktop/mj/dog.aa"];
+
+}
+
+/**
+ *  归档和解档测试  成功
+ *  作用获取对象所有成员变量的属性
+ */
+- (void)demoDog {
+    //    Dog *dog = [[Dog alloc] init];
+    //    dog.age = 50;
+    //    dog.weight = 50.5;
+    //    dog.height = 1.55;
+    //    dog.nema = @"sdafsdf";
+    Dog *dog =  [NSKeyedUnarchiver unarchiveObjectWithFile:@"/Users/yangxiaochen/Desktop/mj/dog.aa"];
     NSLog(@"%@",dog.nema);
 }
 
